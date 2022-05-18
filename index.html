@@ -7,6 +7,7 @@
     <title>Thien - Band - Demo</title>
     <link rel="icon" href="https://themify.me/wp-content/themes/themify-v32/favicon.png " type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css_file/style.css">
+    <link rel="stylesheet" href="./assets/css_file/responsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -35,6 +36,10 @@
             <!--Begin: Search Button-->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!--End: Search Button-->
         </div>
@@ -218,5 +223,30 @@
         })
     </script>
     <!---End: Script-->
+    <!---Begin: Mobile Menu Script-->
+    <script>
+        var header = document.getElementById("header");
+        var mobileMenu = document.getElementById("mobile-menu");
+        var headerHeight = header.clientHeight;
+        // Đóng mở Menu
+        mobileMenu.onclick = function(){
+            var isClose = header.clientHeight === headerHeight;
+            if (isClose){
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+        // Tự đóng khi chọn Menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function(){
+                header.style.height = null;
+            }
+        }
+    </script>
+    <!---Begin: Mobile Menu Script-->
 </body>
 </html>
