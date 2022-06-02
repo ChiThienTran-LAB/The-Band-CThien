@@ -70,7 +70,6 @@ html{
     left: 0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
 }
 #nav {
     display: inline-block;  
@@ -120,6 +119,12 @@ html{
 }
 #nav .nav-arrow-down {
     font-size: 14px;
+}
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
 }
 #header .mobile-menu-btn,
 #header .search-btn {
@@ -198,7 +203,7 @@ html{
     line-height: 1.4;
 }
 #content .members-list {
-    margin-top: 48px;
+    margin-top: 32px;
 }
 #content .member-name{
     font-size: 15px;
@@ -243,7 +248,7 @@ html{
 }
 /*Places*/
 .places-list{
-    margin-top: 32px;
+    margin-top: 16px;
 }
 .place-img{
     width: 100%;
